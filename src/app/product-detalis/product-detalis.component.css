@@ -1,0 +1,185 @@
+.logoBox1 {
+    position: absolute;
+    left: 4.44%;
+    right: 94.44%;
+    top: 27.5%;
+    bottom: 52.5%;
+    width: 16px;
+    height: 16px;
+
+    background: #010101;
+    opacity: 0.42;
+}
+
+.logoBox2 {
+    position: absolute;
+    left: 3.33%;
+    right: 95.56%;
+    top: 27.5%;
+    bottom: 52.5%;
+    width: 16px;
+    height: 16px;
+
+    background: #333333;
+}
+
+.logoBox3 {
+    position: absolute;
+    left: 3.33%;
+    right: 95.56%;
+    top: 47.5%;
+    bottom: 32.5%;
+    width: 16px;
+    height: 16px;
+
+    background: #676767;
+}
+
+.logoFinalPart {
+    position: absolute;
+    left: 4.72%;
+    right: 94.17%;
+    top: 52.5%;
+    bottom: 27.5%;
+    height: 16px;
+    width: 16px;
+
+    background: #B1794E;
+    opacity: 0.4;
+    border-radius: 0px 10.6667px 10.6667px 0px;
+}
+
+.productTitle {
+    font-family: 'poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 28px;
+line-height: 140%;
+color: #2F2F2F;
+font-weight : bold;
+}
+
+.dot {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    display: inline-block;
+   }
+
+   .quantity {
+    display: inline-block; }
+   
+   .quantity .input-text.qty {
+    width: 0%;
+    height: 20%;
+    padding: 0 5px;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid #efefef;
+   }
+   
+   .quantity.buttons_added {
+    text-align: left;
+    position: relative;
+    white-space: nowrap;
+    vertical-align: top; }
+   
+   .quantity.buttons_added input {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    box-shadow: none;
+   }
+   
+   .quantity.buttons_added .minus,
+   .quantity.buttons_added .plus {
+    padding: 7px 10px 8px;
+    height: 41px;
+    background-color: #ffffff;
+    border: 1px solid #efefef;
+    cursor:pointer;}
+   
+   .quantity.buttons_added .minus {
+    border-right: 0; }
+   
+   .quantity.buttons_added .plus {
+    border-left: 0; }
+   
+   .quantity.buttons_added .minus:hover,
+   .quantity.buttons_added .plus:hover {
+    background: #eeeeee; }
+   
+   .quantity input::-webkit-outer-spin-button,
+   .quantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0; }
+    
+    .quantity.buttons_added .minus:focus,
+   .quantity.buttons_added .plus:focus {
+    outline: none; }
+   
+    .accordion {
+        background-color: white;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+      }
+      
+      .active, .accordion:hover {
+        background-color: #fff;
+      }
+      
+      .accordion:after {
+        content: '\002B';
+        color: #777;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+      }
+      
+      .active:after {
+        content: "\2212";
+      }
+      
+      .panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+
+      .menu {
+        font-family: 'poppins';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 18px;
+        color: #6D6D6D;
+        
+      }
+
+      .pdOriginals {
+        font-family: 'poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        
+        /* PARTH DESIGNS/pd_secondary_txt */
+        color: #6D6D6D;
+      }
+
+      .isActiveImg {
+        border-style: solid;
+        border-width: 3px;
+        border-color : orange;
+        border-radius : 50px;
+      }

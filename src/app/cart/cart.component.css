@@ -1,0 +1,134 @@
+.pdOriginals {
+    font-family: 'Suisse Screen';
+font-style: normal;
+font-weight: 400;
+padding-left : 5%;
+padding-top : 1%;
+color: #6D6D6D;
+}
+
+.cartItemName {
+    font-family: 'Suisse Screen';
+font-style: normal;
+font-weight: 400;
+padding-left : 5%;
+flex-grow: 1;
+width : 100%;
+color: #2F2F2F;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left : 5%;
+   }
+
+.colorDescription {
+    font-family: 'Suisse Screen';
+font-style: normal;
+font-weight: 400;
+padding : 1%;
+padding-top : 0%;
+color: #6D6D6D;
+}
+
+.priceItem {
+    font-family: 'Suisse Screen';
+font-style: normal;
+font-weight: 500;
+flex-grow: 1;
+line-height: 29px;
+width : 100%;
+/* identical to box height */
+
+color: #2F2F2F;
+}
+
+.quantity {
+    display: inline-block; }
+   
+   .quantity .input-text.qty {
+    width: 35px;
+    height: 39px;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid #efefef;
+   }
+   
+   .quantity.buttons_added {
+    text-align: left;
+
+    white-space: nowrap;
+    vertical-align: top; }
+   
+   .quantity.buttons_added input {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    box-shadow: none;
+   }
+   
+   .quantity.buttons_added .minus,
+   .quantity.buttons_added .plus {
+    padding: 7px 10px 8px;
+    height: 39px;
+    background-color: #ffffff;
+    border: 1px solid #efefef;
+    cursor:pointer;}
+   
+   .quantity.buttons_added .minus {
+    border-right: 0; }
+   
+   .quantity.buttons_added .plus {
+    border-left: 0; }
+   
+   .quantity.buttons_added .minus:hover,
+   .quantity.buttons_added .plus:hover {
+    background: #eeeeee; }
+   
+   .quantity input::-webkit-outer-spin-button,
+   .quantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0; }
+    
+    .quantity.buttons_added .minus:focus,
+   .quantity.buttons_added .plus:focus {
+    outline: none; }
+   
+.deleteProduct {
+    font-family: 'Suisse Screen';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+margin-top : -3%;
+
+/* PARTH DESIGNS/pd_cta_colour */
+color: #B1794E;
+}
+
+.shippingTitle {
+    font-family: 'Suisse Screen';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 21px;
+color: #2F2F2F;
+
+opacity: 0.4;
+}
+
+.shippingAddr {
+    font-family: 'Suisse Screen';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 160%;
+/* or 29px */
+
+color: #2F2F2F;
+}
