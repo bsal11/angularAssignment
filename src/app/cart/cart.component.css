@@ -1,5 +1,7 @@
+
 .pdOriginals {
-    font-family: 'Suisse Screen';
+    font-family: 'poppins';
+    font-size : 1em;
 font-style: normal;
 font-weight: 400;
 padding-left : 5%;
@@ -7,12 +9,16 @@ padding-top : 1%;
 color: #6D6D6D;
 }
 
+.parthDesign {
+    height : 21%;
+    width : 18%;
+}
 .cartItemName {
-    font-family: 'Suisse Screen';
+    font-family: 'poppins';
+    font-size : 1.2em;
 font-style: normal;
 font-weight: 400;
 padding-left : 5%;
-flex-grow: 1;
 width : 100%;
 color: #2F2F2F;
 }
@@ -24,11 +30,13 @@ color: #2F2F2F;
     border-radius: 50%;
     display: inline-block;
     margin-left : 5%;
+    margin-top : 0.4%;
    }
 
 .colorDescription {
-    font-family: 'Suisse Screen';
+    font-family: 'poppins';
 font-style: normal;
+font-size : .9em;
 font-weight: 400;
 padding : 1%;
 padding-top : 0%;
@@ -38,17 +46,19 @@ color: #6D6D6D;
 .priceItem {
     font-family: 'Suisse Screen';
 font-style: normal;
+font-size : 1.3em;
 font-weight: 500;
-flex-grow: 1;
+font-weight: bold;
 line-height: 29px;
-width : 100%;
-/* identical to box height */
-
+width : 20%;
 color: #2F2F2F;
 }
 
 .quantity {
-    display: inline-block; }
+    display: inline-block; 
+    margin-left : 5%; 
+    margin-top : -5%;
+}
    
    .quantity .input-text.qty {
     width: 35px;
@@ -73,7 +83,7 @@ color: #2F2F2F;
    
    .quantity.buttons_added .minus,
    .quantity.buttons_added .plus {
-    padding: 7px 10px 8px;
+    padding: 7px 20px 8px;
     height: 39px;
     background-color: #ffffff;
     border: 1px solid #efefef;
@@ -100,35 +110,149 @@ color: #2F2F2F;
     outline: none; }
    
 .deleteProduct {
-    font-family: 'Suisse Screen';
+    font-family: 'poppins';
 font-style: normal;
 font-weight: 400;
 font-size: 14px;
 line-height: 18px;
-margin-top : -3%;
+margin-top : -4%;
+margin-left : -12%;
+
+/* PARTH DESIGNS/pd_cta_colour */
+color: #B1794E;
+}
+
+.saveForLetter {
+    font-family: 'poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+margin-top : -4%;
+margin-left : -6%;
 
 /* PARTH DESIGNS/pd_cta_colour */
 color: #B1794E;
 }
 
 .shippingTitle {
-    font-family: 'Suisse Screen';
+    font-family: 'poppins';
 font-style: normal;
 font-weight: 500;
-font-size: 16px;
+font-size: .9em;
 line-height: 21px;
 color: #2F2F2F;
-
+margin-top : 1%;
 opacity: 0.4;
 }
 
 .shippingAddr {
-    font-family: 'Suisse Screen';
+    font-family: 'poppings';
 font-style: normal;
 font-weight: 500;
-font-size: 18px;
+font-size : 1.1em;
 line-height: 160%;
-/* or 29px */
-
 color: #2F2F2F;
 }
+
+.totalOrderItem {
+    font-size : 1.2em;
+    color : #2F2F2F;
+    text-align : center;
+    margin-top : 10%;
+}
+
+.totalPrice {
+    font-size : 1.5em;
+    color : #2F2F2F;
+    text-align : center;
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .parthDesign {
+      width: 40%;
+      height : 40%;
+    }
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    .pdOriginals {
+      font-size : .8em;
+      margin-left : 5%;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .cartItemName {
+      font-size : 1em;
+      margin-top : -3%;
+      margin-left : 5%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .colorDescription {
+      margin-top : -1%;
+      margin-left : 3%;
+      
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .deleteProduct {
+      display : inline;
+      width : 100%;
+      margin-left: -210%;
+      margin-top : 5%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .saveForLetter {
+      display : inline;
+      width : 100%;
+      margin-left : -75%;
+      margin-top : 5%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .quantity {
+        display : block;
+        margin-top : 0%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .cartText {
+        margin-top : 10%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .checkoutClass {
+        position: fixed; 
+        bottom: 10px; 
+        width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .leftCart {
+        width : 100%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .dot {
+        margin-left : 10%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .totalPriceDisp {
+        bottom : 0;
+    }
+  }

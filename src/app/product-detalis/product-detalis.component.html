@@ -6,109 +6,241 @@
 <img class = "searchIcon" src = "/assets/images/searchIcon.png" alt = "searchIcon"/>
 </div> -->
 
-    <div class="container-fluid" style = "padding-top : 1%">
+<div class="container-fluid" style="padding-top : 1%">
 
-        <div class="row" style = "padding : 1%;">
-            <div class="col-12 col-lg-6">
-                <img src="/assets/images/furniture_big.png" style="width : 100%; height : auto" alt="Logo" />
-            </div>
-
-            <div class="col-12 col-lg-6">
-                <p class = "menu d-none d-lg-block"> Home &nbsp;>&nbsp; Furniture &nbsp;>&nbsp; Chair &nbsp;>&nbsp; Rocking Chair</p>
-                <p class="productTitle">Modern Ergonomic Rocking Chair with Cushion Foam 1 Seater </p>
-                <p class = "pdOriginals"> PD Originals </p>
-                <p style=" border-bottom: 1px solid #DADADA; opacity : 0.5;">{{productDetails.discountPrice | currency : 'INR'}} 
-                    <del *ngIf = "productDetails.originalPrice != productDetails.discountPrice" style = "margin-left : 2%">{{productDetails.originalPrice | currency : 'INR'}}</del> 
-                    <span *ngIf = "productDetails.originalPrice != productDetails.discountPrice" style = "margin-left : 1%; color : #418019;">(Save 40%)</span></p>
-                <p style = "font-family: 'poppins';"> Choose Wood Finish: Teak </p>
-
-                <div class="flex">
-                    <img (click) = "highlightWoodType(i)" [class.isActiveImg] = "woodType.isActive" *ngFor = "let woodType of productDetails.woodType; let i=index" [src] = woodType.img style = "margin-right : 5%;"/>
-                </div> <br>
-                <p> Choose Texture / Colour: Burnt Orange </p>
-
-                <div class="flex">
-                    <span *ngFor = "let color of productDetails.colorType" class="dot" style="margin-right : 5%; background-color: {{color}}"></span>
-                </div> <br>
-
-                <div class="quantity buttons_added">
-                    <span> Quantity </span>
-                    <span><input type="button" value="-" (click) = "changeQty('minus')" class="minus">
-                        <input type="number" style="width : 40%" step="1" min="1" max="" name="quantity" value={{quantity}}
-                            title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input
-                            type="button" value="+" (click) = "changeQty('add')" class="plus"></span>
-                </div>
-
-                <div class="flex" style=" margin-top : 3%">
-                    <button type="button" class="btn btn-primary rounded-0"
-                        style="background-color : #B1794E; border-color : #B1794E">Pre-Order Now</button>
-                    <a routerLink="cart"> <button type="button" (click) = "changeToGoToCart()" class="btn btn-primary rounded-0"
-                        style="background-color: #FFF; margin-left : 5%; color : #B1794E; border-color : #B1794E; ">
-                        {{cartButtonText}}</button></a>
-                </div> <br><br>
-
-                <div class="accordion" id="accordionPanelsStayOpenExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                          About this item
-                        </button>
-                      </h2>
-                      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                        <div class="accordion-body">
-                          <ul *ngFor = "let aboutItem of productDetails.aboutProduct">
-                            <li> {{aboutItem}} </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                          General
-                        </button>
-                      </h2>
-                      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                        <div class="accordion-body">
-
-                          </div>
-                      </div>
-                    </div>
-
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                          Materials & Colours
-                        </button>
-                      </h2>
-                      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-                        <div class="accordion-body">
-                          <span *ngFor = "let materialColor of productDetails.materialsAndColors">
-                            <p><span>{{materialColor[0]}}</span>   <span style = "float : right; margin-right:50%;">{{materialColor[1]}}</span></p>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                          Dimensions
-                        </button>
-                      </h2>
-                      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                        <div class="accordion-body">
-                          <span *ngFor = "let dimension of productDetails.dimensions">
-                            <p><span>{{dimension[0]}}</span>   <span style = "float : right; margin-right:50%;">{{dimension[1]}}</span></p>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-            </div>
-
+  <div class="row" style="padding : 1%;">
+    <div class="col-12 col-lg-6">
+      <img src="/assets/images/furniture_big.png" style="width : 100%; height : auto" alt="furniture" />
+      <br>
+      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+          <img src="{{ slide }}" alt="" width="70%" >
         </div>
+      </ngx-slick-carousel>
     </div>
 
-    <router-outlet></router-outlet>
+    <div class="col-12 col-lg-6">
+      <p class="menu d-none d-lg-block"> Home &nbsp;>&nbsp; Furniture &nbsp;>&nbsp; Chair &nbsp;>&nbsp; Rocking Chair
+      </p>
+      <p class="productTitle">Modern Ergonomic Rocking Chair with Cushion Foam 1 Seater </p>
+      <p class="pdOriginals"> PD Originals </p>
+      <p style="font-family: 'poppins';"><span
+          style="font-weight : bold; font-size : 1.4em;">{{productDetails.discountPrice | currency : 'INR'}} </span>
+        <del *ngIf="productDetails.originalPrice != productDetails.discountPrice" style="margin-left : 2%"><span
+            style="color : #6D6D6D; font-size : 1em;">{{productDetails.originalPrice | currency : 'INR'}}</span></del>
+        <span *ngIf="productDetails.originalPrice != productDetails.discountPrice"
+          style="font-size : 0.8em; margin-left : 1%; color : #418019;">(Save 40%)</span>
+      </p>
+
+      <div style="border-bottom : 1px solid #DADADA; opacity: 0.5;"></div>
+
+      <p class="woodClass"> Choose Wood Finish: <span style="color : black;font-weight : bold;">Teak</span></p>
+
+      <div class="flex">
+        <img (click)="highlightWoodType(i)" [class.isActiveImg]="woodType.isActive"
+          *ngFor="let woodType of productDetails.woodType; let i=index" [src]=woodType.img style="margin-right : 5%;" />
+      </div> <br>
+      <p class="textureClass"> Choose Texture / Colour: <span style="color : black;font-weight : bold;">Burnt Orange
+        </span></p>
+
+      <div class="flex">
+        <span *ngFor="let color of productDetails.colorType" class="dot"
+          style="margin-right : 5%; background-color: {{color}}"></span>
+      </div> <br>
+
+      <div class="quantity buttons_added" style="margin-top : 2%">
+        <span> Quantity </span>
+        <span class="quantUpdate"><input type="button" value="-" (click)="changeQty('minus')" class="minus">
+          <input type="number" style="width : 25%" step="1" min="1" max="" name="quantity" value={{quantity}}
+            title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+"
+            (click)="changeQty('add')" class="plus"></span>
+      </div>
+
+      <div class="flex d-none d-lg-block" style=" margin-top : 5%">
+        <button type="button" class="btn btn-primary rounded-0"
+          style="background-color : #B1794E; border-color : #B1794E; padding : 1em 2.5em">Pre-Order Now</button>
+        <a routerLink={{cartUrl}}> <button type="button" (click)="changeToGoToCart()" class="btn btn-primary rounded-0"
+            style="background-color: #FFF; margin-left : 5%; color : #B1794E; border-color : #B1794E; padding : 1em 2.5em">
+            {{cartButtonText}}</button></a>
+      </div>
+
+      <div class="pincodeClass d-block d-sm-none">
+        <img src="/assets/images/vehicle.png" style="opacity : 0.5" />
+        <span style="color : #6D6D6D; margin-left : 2%; font-family : poppins; font-size : .7em; opacity: 0.5;">Enter
+          pincode to check delivery time</span>
+        <div style="display : flex">
+          <input type="text" style="text-indent:10px; width : 70%; height : 20%; margin-top : 3%; color : #B1794E"
+            class="form-control" placeholder="Enter Pincode here.." />
+          <button type="button" class="btn btn-primary rounded-0" disabled
+            style="margin-left : 8%; margin-top : 3%; height : 2em; background-color : #B1794E; border-color : #B1794E;">Check</button>
+        </div>
+      </div>
+
+
+      <div class="accordion" id="accordionPanelsStayOpenExample" style="margin-top : 10%; padding : 0px;">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseOne">
+              About this item
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+              <ul *ngFor="let aboutItem of productDetails.aboutProduct">
+                <li> {{aboutItem}} </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseTwo">
+              General
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body">
+              <span *ngFor="let generalInfo of productDetails.generalInfo">
+                <p><span>{{generalInfo[0]}}</span> <span
+                    style="float : right; margin-right:30%;">{{generalInfo[1]}}</span></p>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseThree">
+              Materials & Colours
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingThree">
+            <div class="accordion-body">
+              <span *ngFor="let materialColor of productDetails.materialsAndColors">
+                <p><span>{{materialColor[0]}}</span> <span
+                    style="float : right; margin-right:50%;">{{materialColor[1]}}</span></p>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseFour">
+              Dimensions
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingFour">
+            <div class="accordion-body">
+              <span *ngFor="let dimension of productDetails.dimensions">
+                <p><span>{{dimension[0]}}</span> <span style="float : right; margin-right:50%;">{{dimension[1]}}</span>
+                </p>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseFive">
+              Refund/Replacement/Cancellations
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingFive">
+            <div class="accordion-body">
+              <span><strong>Refunds </strong>: We carefully inspect each item prior to shipment, and also require your
+                inspection and signature upon
+                delivery. Should you discover a defect in your product, however, please contact us immediately. Product
+                that is
+                refused because it does not fit through an entryway will be customer’s responsibility as we encourage to
+                study
+                the sizes mentioned on the product page carefully and see if the product you order fits into your
+                entryway and
+                rooms.</span><br>
+              <strong>We offer replacement or refund for any defective items only.</strong>
+              <p>Refunds will be initiated within 7 to 10 business days on your original payment method.</p>
+
+              <p><strong>Replacements</strong> : All products are eligible for free replacement, in an unlikely event of
+                damaged, defective or
+                different item delivered to you. Please contact or write to us at : care@parthdesigns.com within 3 days
+                of
+                delivery.</p>
+
+              <strong>Cancellation Policy </strong>- You can cancel confirmed order only within 24 hours of placing the
+              order. Post 24 hours
+              no cancellations are allowed.
+
+              <br><br>You can always contact us for any queries at <a style="color : #B1794E"
+                href="mailto:care@parthdesigns.com"> care@parthdesigns.com</a>
+              <br>You can always contact us for any queries on :
+              <br>Weekdays 10AM - 7PM
+              <br>Number : <span style="color : #B1794E">+91 9606067547</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseSix">
+              Warrantyn & Installations
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingSix">
+            <div class="accordion-body">
+              <p>ParthDesigns Store or Seller does not offer installation of this product. The product comes with a 12
+                month
+                warranty against any manufacturing defects and any other issues with the materials that have been used.
+              </p>
+
+              <p>The warranty does not cover damages due to usage of the product beyond its intended use and wear & tear
+                in the
+                natural course of product usage.</p>
+              Please read our refund policy <span style="color : #B1794E">Here.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseSeven">
+              Disclaimer
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-headingSeven">
+            <div class="accordion-body">
+              <ul *ngFor="let disclaimer of productDetails.disclaimer">
+                <li> {{disclaimer}} </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<router-outlet></router-outlet>

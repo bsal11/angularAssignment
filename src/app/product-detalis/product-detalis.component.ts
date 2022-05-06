@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductDataService } from '../services/product-data.service';
 
 @Component({
   selector: 'app-product-detalis',
@@ -15,8 +16,11 @@ export class ProductDetalisComponent implements OnInit {
   isActiveColor2 : boolean = false;
   isActiveColor3 : boolean = false;
   isActiveImgCounter : number = 1;
+  cartUrl : string  = '/home';
 
-  constructor() { }
+  slideConfig = {"slidesToShow": 4, "slidesToScroll": 3};
+  slides = ["/assets/images/FImg1.png", "/assets/images/FImg2.png", "/assets/images/FImg3.png", "/assets/images/FImg4.png"];
+  constructor( private productDataService : ProductDataService) { }
 
   ngOnInit(): void {
   }
@@ -36,12 +40,17 @@ export class ProductDetalisComponent implements OnInit {
       "Well padded seat of ergonomic shape with backrest and armrest provides a exceptionally comfortable, relaxing, and enjoyable place to sit",
       "It has a gentle rocking effect which helps nursing your baby, relaxing or just enjoying some time together"
     ],
-    generalInfo : [] = ["8QERH7602","1 Seater","Seating, Outdoor & Cafeteria, Living Room","Yes","Yes","No","Rocking Chairs","Natural","Pre-assembled",
-      "Wipe gently with medium wet cloth"
-    ],
-    generalInfoTitle : [] = [
-      "Model Number", "Seating Capacity", "Suitable For", "Armrest", "Upholstery", "Footrest", "Type", "Finish Type",
-      "Delivery Condition", "Care Instructions"
+    generalInfo : [] = [
+      ["Model Number", "8QERH7602"],
+      ["Seating Capacity","1 Seater"],
+      ["Suitable For","Seating, Outdoor & Cafeteria, Living Room"],
+      ["Armrest","Yes"], 
+      ["Upholstery","Yes"], 
+      ["Footrest","No"], 
+      ["Type","Rocking Chairs"], 
+      ["Finish Type","Natural"],
+      ["Delivery Condition","Pre-assembled"], 
+      ["Care Instructions","Wipe gently with medium wet cloth"]
     ],
     materialsAndColors : [] = [
       ["Primary Material", "Foam"],
@@ -57,6 +66,13 @@ export class ProductDetalisComponent implements OnInit {
       ["Height", "24 mm"],
       ["Depth", "37 mm"],
       ["Weight", "14 kg"]
+    ], 
+    disclaimer : [] = [
+      "The color of the product may vary slightly compared to the picture displayed on your screen. This is due to lighting, pixel quality and color settings",
+      "Please check the product's dimensions to ensure the product will fit in the desired location. Also, check if the product will fit through the entrance(s) and door(s) of the premises",
+      "Please expect an unevenness of up to 5 mm in the product due to differences in surfaces and floor levels",
+      "Flipkart, or the Seller delivering the product, will not take up any type of civil work, such as drilling holes in the wall to mount the product. The product will only be assembled in case carpentry assembly is required",
+      "In case the product appears to lack shine, wiping the surface with a cloth will help clear the surface of dust particles"
     ]
   }
 
@@ -75,12 +91,16 @@ export class ProductDetalisComponent implements OnInit {
       this.productDetails.originalPrice -= this.productDetails.fixedOriginalPrice;
       this.productDetails.discountPrice -= this.productDetails.fixedDiscountPrice;
     }
+    this.updateCart();
   }
 
   changeToGoToCart() {
-    this.cartButtonText = 'Go to Cart';
-    if(this.goToCartFlag == false) 
+    if(this.goToCartFlag == false) { 
       this.goToCartFlag = true;
+      this.cartButtonText = 'Go to Cart';
+    } else {
+      this.cartUrl = '/cart';
+    }
   }
 
   highlightWoodType(index:number) {
@@ -92,5 +112,9 @@ export class ProductDetalisComponent implements OnInit {
     console.log(index);
   }
 
+  public updateCart() : void {
+    console.log("Update Cart : "+this.quantity);
+    this.productDataService.updateDetails([this.productDetails.productName, this.quantity,this.productDetails.fixedDiscountPrice]);
+  }
 
 }

@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { ProductDetalisComponent } from './product-detalis/product-detalis.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProductDetalisComponent } from './product-detalis/product-detalis.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

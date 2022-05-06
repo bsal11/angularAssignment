@@ -1,3 +1,5 @@
+
+
 .logoBox1 {
     position: absolute;
     left: 4.44%;
@@ -53,8 +55,9 @@
     font-family: 'poppins';
 font-style: normal;
 font-weight: 400;
-font-size: 28px;
+font-size: 1.7em;
 line-height: 140%;
+width : 65%;
 color: #2F2F2F;
 font-weight : bold;
 }
@@ -67,11 +70,13 @@ font-weight : bold;
    }
 
    .quantity {
-    display: inline-block; }
+    display: inline-block; 
+
+  }
    
    .quantity .input-text.qty {
     width: 0%;
-    height: 20%;
+    height: 2.5em;
     padding: 0 5px;
     text-align: center;
     background-color: transparent;
@@ -93,8 +98,8 @@ font-weight : bold;
    
    .quantity.buttons_added .minus,
    .quantity.buttons_added .plus {
-    padding: 7px 10px 8px;
-    height: 41px;
+    padding: 7px 12px 8px;
+    height: 2.5em;
     background-color: #ffffff;
     border: 1px solid #efefef;
     cursor:pointer;}
@@ -170,7 +175,7 @@ font-weight : bold;
         font-family: 'poppins';
         font-style: normal;
         font-weight: 400;
-        font-size: 14px;
+        font-size: 0.8em;
         line-height: 18px;
         
         /* PARTH DESIGNS/pd_secondary_txt */
@@ -182,4 +187,64 @@ font-weight : bold;
         border-width: 3px;
         border-color : orange;
         border-radius : 50px;
+      }
+
+      .woodClass {
+        font-family: 'poppins'; 
+        font-size : 1em; 
+        color : #6D6D6D; 
+        margin-top : 3%;
+      }
+
+      .textureClass {
+        font-family: 'poppins';
+        font-size : 1em;
+        color : #6D6D6D;
+        margin-top : 2%;
+      }
+
+      .quantUpdate {
+        margin-left : 0%;
+      }
+
+      .pincodeClass {
+        margin-top : 6%;
+      }
+
+      .accordion-item {
+        border-left : none; 
+        border-right : none;
+      }
+
+      .slick-wrapper{
+        width: 1000px;
+        margin: 20px auto;
+    }
+   
+      
+
+      @media only screen and (max-width: 768px) {
+        .productTitle {
+          width: 100%;
+          font-size: 1.2em;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        .woodClass {
+          font-size: 0.8em;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        .textureClass {
+          width: 100%;
+          font-size: 0.8em;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        .quantUpdate {
+          margin-left : 35%;
+        }
       }
